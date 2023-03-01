@@ -38,6 +38,7 @@ app.get("/add", (req, res) => {
   res.send(apiResult);
 });
 
-app.listen(5000, () => {
-  console.log("hello Express");
+const port = process.env.PORT || 5000
+app.listen(port, () => {
+  console.log("hello Express",port,'監聽中');
 });
